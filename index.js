@@ -11,4 +11,4 @@ mongoose
 
 AppRouter(app);
 
-app.listen(10000);
+app.listen(process.env.PORT || 10000);
