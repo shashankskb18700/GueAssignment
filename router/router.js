@@ -68,6 +68,10 @@ const AppRouter = (app) => {
     res.status(201).json(item);
   });
 
+  app.get("/", (req, res) => {
+    res.json("assignment");
+  });
+
   app.get("/categories", async (req, res) => {
     const categories = await Category.find().populate("subCategory");
     res.json(categories);
